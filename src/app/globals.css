@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+/* ============================================================
+   CAFE MANAGEMENT SYSTEM — DESIGN SYSTEM
+   Coffee-inspired professional SaaS palette
+   ============================================================ */
+
+:root {
+  /* ─── Brand Colors ─────────────────────────────────────── */
+  --color-brand-50: #fdf8f4;
+  --color-brand-100: #f9edd9;
+  --color-brand-200: #f0d5ae;
+  --color-brand-300: #e4b67a;
+  --color-brand-400: #d4904a;
+  --color-brand-500: #c4722a;
+  --color-brand-600: #a85a1f;
+  --color-brand-700: #8b451a;
+  --color-brand-800: #6f3618;
+  --color-brand-900: #5a2c15;
+
+  /* ─── Coffee Browns ─────────────────────────────────────── */
+  --color-coffee-50: #f9f4ef;
+  --color-coffee-100: #ecddd1;
+  --color-coffee-200: #d9bba3;
+  --color-coffee-300: #c29272;
+  --color-coffee-400: #a96e4a;
+  --color-coffee-500: #8b5433;
+  --color-coffee-600: #6f4028;
+  --color-coffee-700: #57301f;
+  --color-coffee-800: #40231a;
+  --color-coffee-900: #2c1810;
+
+  /* ─── Neutrals (Warm Cream) ─────────────────────────────── */
+  --color-cream-50: #fefdfb;
+  --color-cream-100: #faf8f3;
+  --color-cream-200: #f3ede2;
+  --color-cream-300: #e8dfd0;
+  --color-cream-400: #d6c9b5;
+  --color-cream-500: #b8a48a;
+  --color-cream-600: #9a8569;
+  --color-cream-700: #7d6a52;
+  --color-cream-800: #5e5040;
+  --color-cream-900: #3e3429;
+
+  /* ─── Semantic Colors ───────────────────────────────────── */
+  --color-success: #16a34a;
+  --color-success-bg: #f0fdf4;
+  --color-warning: #d97706;
+  --color-warning-bg: #fffbeb;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fef2f2;
+  --color-info: #2563eb;
+  --color-info-bg: #eff6ff;
+
+  /* ─── UI Tokens ─────────────────────────────────────────── */
+  --background: var(--color-cream-50);
+  --foreground: #1c1917;
+  --surface: #ffffff;
+  --surface-raised: #fefdfb;
+  --border: #e5e0d8;
+  --border-subtle: #f0ece6;
+  --muted: #f5f1eb;
+  --muted-foreground: #78716c;
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #ece8e1;
+  --header-bg: rgba(255, 255, 255, 0.95);
+
+  /* ─── Typography ────────────────────────────────────────── */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", "Fira Code", monospace;
+
+  /* ─── Spacing ───────────────────────────────────────────── */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+
+  /* ─── Shadows ───────────────────────────────────────────── */
+  --shadow-sm: 0 1px 2px 0 rgba(28, 25, 23, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(28, 25, 23, 0.07), 0 2px 4px -2px rgba(28, 25, 23, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(28, 25, 23, 0.07), 0 4px 6px -4px rgba(28, 25, 23, 0.05);
+  --shadow-card: 0 1px 3px rgba(28, 25, 23, 0.08), 0 1px 2px rgba(28, 25, 23, 0.06);
+}
+
+/* ─── Tailwind v4 Theme ─────────────────────────────────── */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Brand */
+  --color-brand-50: var(--color-brand-50);
+  --color-brand-100: var(--color-brand-100);
+  --color-brand-200: var(--color-brand-200);
+  --color-brand-300: var(--color-brand-300);
+  --color-brand-400: var(--color-brand-400);
+  --color-brand-500: var(--color-brand-500);
+  --color-brand-600: var(--color-brand-600);
+  --color-brand-700: var(--color-brand-700);
+  --color-brand-800: var(--color-brand-800);
+  --color-brand-900: var(--color-brand-900);
+
+  /* Coffee */
+  --color-coffee-50: var(--color-coffee-50);
+  --color-coffee-100: var(--color-coffee-100);
+  --color-coffee-200: var(--color-coffee-200);
+  --color-coffee-300: var(--color-coffee-300);
+  --color-coffee-400: var(--color-coffee-400);
+  --color-coffee-500: var(--color-coffee-500);
+  --color-coffee-600: var(--color-coffee-600);
+  --color-coffee-700: var(--color-coffee-700);
+  --color-coffee-800: var(--color-coffee-800);
+  --color-coffee-900: var(--color-coffee-900);
+
+  /* Cream */
+  --color-cream-50: var(--color-cream-50);
+  --color-cream-100: var(--color-cream-100);
+  --color-cream-200: var(--color-cream-200);
+  --color-cream-300: var(--color-cream-300);
+  --color-cream-400: var(--color-cream-400);
+  --color-cream-500: var(--color-cream-500);
+  --color-cream-600: var(--color-cream-600);
+  --color-cream-700: var(--color-cream-700);
+  --color-cream-800: var(--color-cream-800);
+  --color-cream-900: var(--color-cream-900);
+
+  /* Surface / UI */
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-sidebar-bg: var(--sidebar-bg);
+}
+
+/* ─── Base Styles ───────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  height: 100%;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+#__next,
+main {
+  height: 100%;
+}
+
+/* ─── Scrollbar Styling ─────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-cream-300);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cream-400);
+}
+
+/* ─── Typography ────────────────────────────────────────── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* ─── Focus States ──────────────────────────────────────── */
+
+*:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ─── Animations ────────────────────────────────────────── */
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+.animate-fade-in    { animation: fade-in 0.25s ease-out both; }
+.animate-slide-in   { animation: slide-in-up 0.25s ease-out both; }
+.animate-scale-in   { animation: scale-in 0.2s ease-out both; }
+.animate-pulse-soft { animation: pulse-soft 2s ease-in-out infinite; }
+
+/* ─── Utility Classes ───────────────────────────────────── */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.card-hover {
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.card-hover:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.timeline-scroll {
+  overflow-x: auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.timeline-grid {
+  min-width: 1400px;
+}
+
+/* ─── Table Styles ──────────────────────────────────────── */
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.data-table th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-foreground);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--muted);
+}
+
+.data-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr {
+  transition: background-color 0.1s ease;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--color-cream-50);
+}
+
+/* ─── Payslip Print Styles ──────────────────────────────── */
+
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  body { background: white; font-size: 12pt; }
+  .payslip-container {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    max-width: 100% !important;
+  }
+}
